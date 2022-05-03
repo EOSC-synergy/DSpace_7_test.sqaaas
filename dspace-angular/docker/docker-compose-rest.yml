@@ -119,7 +119,7 @@ services:
       precreate-core statistics /opt/solr/server/solr/configsets/dspace/statistics
       cp -r -u /opt/solr/server/solr/configsets/dspace/statistics/* statistics
       exec solr -f
-dspace_fair:
+  dspace_fair:
     container_name: dspace-fair
     image: "ferag/fair_eva:latest"
     build:
@@ -140,7 +140,7 @@ dspace_fair:
       while (!</dev/tcp/dspace/8080) > /dev/null 2>&1; do sleep 1; done;
       ls /FAIR_eva
       /FAIR_eva/start.sh      
-dspace_ds:
+  dspace_ds:
     container_name: dspace-ingest
     image: "${DOCKER_OWNER:-dspace}/dspace:${DSPACE_VER:-dspace-7_x-ingest}"
     build:

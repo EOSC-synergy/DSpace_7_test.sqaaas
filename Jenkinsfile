@@ -51,8 +51,8 @@ pipeline {
             steps {
                 echo "Check ingestion"
                 dir ('.') {
-                    sh 'docker logs -f dspace-ingest'
-                    sh 'docker logs -f dspace-fair'
+                    sh 'docker logs dspace-ingest'
+                    sh 'docker logs dspace-fair'
                 }
             }
         }

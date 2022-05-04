@@ -18,6 +18,4 @@ RUN cp config.ini.template config.ini
 RUN cd /FAIR_eva
 RUN chmod 777 start.sh
 RUN cat start.sh
-COPY fair-eva.py /usr/bin
-RUN chmod +x /usr/bin/fair-eva.py
 CMD /FAIR_eva/start.sh

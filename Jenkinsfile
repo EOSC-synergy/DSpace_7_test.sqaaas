@@ -52,6 +52,7 @@ pipeline {
                 echo "Check ingestion"
                 dir ('.') {
                     sh 'docker logs -f dspace-ingest'
+                    sh 'docker logs -f dspace-fair'
                 }
             }
         }
@@ -60,7 +61,7 @@ pipeline {
             steps {
                 echo "Clean up"
                 dir ('./dspace-angular') {
-                    sh 'docker-compose -f docker/docker-compose-fair.yml down -v'
+                    sh 'docker-compose -f docker/docker-compose-rest.yml down -v'
                 }
             }
         }

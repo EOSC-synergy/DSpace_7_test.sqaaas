@@ -138,7 +138,7 @@ services:
     - '-c'
     - |
       while (!</dev/tcp/dspace/8080) > /dev/null 2>&1; do sleep 1; done;
-      ls /FAIR_eva
+      grep -R dspace_7
       /FAIR_eva/start.sh      
   dspace_ds:
     container_name: dspace-ingest

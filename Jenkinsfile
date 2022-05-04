@@ -59,8 +59,8 @@ pipeline {
             agent any
             steps {
                 echo "Clean up"
-                dir ('.') {
-                    sh 'docker-compose -f docker-compose-fair.yml down -v'
+                dir ('./dspace-angular') {
+                    sh 'docker-compose -f docker/docker-compose-fair.yml down -v'
                 }
             }
         }

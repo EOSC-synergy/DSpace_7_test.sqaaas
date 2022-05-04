@@ -15,5 +15,6 @@ environment:
   GIT_COMMITTER_NAME: Fernando
   GIT_COMMITTER_EMAIL: aguilarf@ifca.unican.es
   LANG: C.UTF-8
+  JPL_DOCKERFORCEBUILD: "enabled"
 
 timeout: 600

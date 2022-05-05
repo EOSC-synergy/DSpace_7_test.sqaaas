@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo "Running tests in a fully containerized environment - :)"
                 dir ('./dspace-angular') {
-                    sh 'docker-compose -p d7 -f docker/docker-compose.yml -f docker/docker-compose-rest.yml up --no-cache --build -d'
+                    sh 'docker-compose -p d7 -f docker/docker-compose.yml -f docker/docker-compose-rest.yml up --force-recreate  -d'
                 }
             }
         }

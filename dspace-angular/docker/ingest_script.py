@@ -13,7 +13,7 @@ body = {
   "oai_base": "",
   "lang": "ES"
 }
-url = "http://dspace-fair:9090/v1.0/rda/rda_all"
+url = "http://localhost:9090/v1.0/rda/rda_all"
 result = requests.post(url, data = json.dumps(body), headers={'Content-Type': 'application/json'}, verify=False)
 print(result.content)
 

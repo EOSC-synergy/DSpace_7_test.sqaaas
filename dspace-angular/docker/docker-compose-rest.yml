@@ -121,7 +121,7 @@ services:
       exec solr -f
   dspace_fair:
     container_name: dspace-fair
-    image: "eosc-synergy/fair_eva:latest"
+    image: "eosc-synergy/fair_eva:v2"
     build:
       context: .
       dockerfile: Dockerfile.fair
